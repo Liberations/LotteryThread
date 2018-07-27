@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <color name="lottery_title_color">#ff222222</color>
+    <color name="trend_gp_list_odd">#ffffff</color>
+    <color name="trend_gp_list_even">#f6f6f6</color>
+    <color name="trend_gp_line_odd_bg">#f6f6f6</color>
+    <color name="trend_gp_ball_red">#ff7c73</color>
+    <color name="trend_gp_x_ball_red">#ff7c73</color>
+    <color name="trend_gp_x_ball_stroke">#d9d9d9</color>
+    <color name="trend_gp_x_red_text">#ff7c73</color>
+    <color name="trend_gp_xtitle_bg">#f6f6f6</color>
+    <color name="trend_gp_max_count_color">#bd2be7</color>
+    <color name="trend_gp_max_lianchu_bg">#ffffff</color>
+    <color name="trend_gp_max_lianchu_color">#0051e6</color>
+    <color name="trend_gp_max_yilou_color">#ff9415</color>
+    <color name="trend_gp_avg_yilou_color">#059d29</color>
+    <color name="trend_gp_avg_yilou_bg">#ffe9f1dc</color>
+    <color name="trend_gp_divider">#d9d9d9</color>
+    <color name="trend_gp_qihao_text_bg">#f6f6f6</color>
+    <color name="trend_gp_content_yilou">#808080</color>
+    <color name="trend_gp_qihao_text">#000000</color>
+
+
+
+</resources>
