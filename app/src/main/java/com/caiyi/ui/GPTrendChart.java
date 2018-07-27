@@ -161,7 +161,7 @@ public class GPTrendChart extends GTrendChart {
             int size = this.mTrendData.size();
             for (int i = 0; i < size; i++) {
                 int i2 = i * this.mYItemHeight;
-                if (i == size - 4) {
+                if (i == size ) {
                     this.mRect.set(0, this.mYItemHeight * i, this.mYItemWidth, (this.mYItemHeight * i) + this.mDivHeight);
                     this.mPaint.setColor(-1);
                     beginRecording.drawRect(this.mRect, this.mPaint);
@@ -170,7 +170,7 @@ public class GPTrendChart extends GTrendChart {
 //                    beginRecording.drawLine(0.0f, (float) i2, (float) this.mYItemWidth, (float) i2, this.mPaint);
 //                    beginRecording.drawLine(0.0f, (float) ((this.mDivHeight + i2) - 1), (float) this.mYItemWidth, (float) ((this.mDivHeight + i2) - 1), this.mPaint);
                     this.mRect.set(0, this.mDivHeight + i2, this.mYItemWidth, (this.mYItemHeight + i2) + this.mDivHeight);
-                } else if (i > size - 4) {
+                } else if (i > size ) {
                     this.mRect.set(0, this.mDivHeight + i2, this.mYItemWidth, (this.mYItemHeight + i2) + this.mDivHeight);
                 } else {
                     this.mRect.set(0, i2, this.mYItemWidth, this.mYItemHeight + i2);
@@ -288,6 +288,7 @@ public class GPTrendChart extends GTrendChart {
      * 画Xbottom
      */
     public void drawXBottom() {
+        if(true)return;
         int i = 1;
         float i2 = this.mXItemWidth * this.redCount;
         int i3 = this.mXItemHeight + this.mBottomMargin;
@@ -340,7 +341,7 @@ public class GPTrendChart extends GTrendChart {
             int i4 = i * this.mXItemHeight;
             if (i != size) {
                 //如果不包含平均遗漏等  画横线
-                if (i < size - 4) {
+                if (i < size ) {
                     this.mRect.set(0, i4, i2, this.mXItemHeight + i4);
                     if (i % 2 == 0) {
                         this.mPaint.setColor(-1);
@@ -355,7 +356,7 @@ public class GPTrendChart extends GTrendChart {
                 } else {
                     //画平均遗漏等数据
                     this.mRect.set(0, this.mDivHeight + i4, i2, (i4 + this.mDivHeight) + this.mXItemHeight);
-                    if (i == (size - 4) + 1) {
+                    if (i == (size ) + 1) {
                         this.mPaint.setColor(this.mCAvgYilouBg);
                     } else if (i == size - 1) {
                         this.mPaint.setColor(this.mCLianchuBg);
@@ -379,7 +380,7 @@ public class GPTrendChart extends GTrendChart {
 //                beginRecording.drawLine((float) i5, 0.0f, (float) i5, (float) size2, this.mPaint);
             }
         }
-        i = (size - 4) * this.mXItemHeight;
+        i = (size ) * this.mXItemHeight;
         this.mPaint.setColor(-1);
         //画垂直方向的空白的矩形（与平均遗漏）
         this.mRect.set(0, i, i2, this.mDivHeight + i);
@@ -408,7 +409,7 @@ public class GPTrendChart extends GTrendChart {
             //如果数据有空的情况
             if (TextUtils.isEmpty(trendData.getRed())) {
                 int i8 = this.mXItemHeight * i6;
-                    if (i6 >= i - 4) {
+                    if (i6 >= i ) {
                     i8 += this.mDivHeight;
                 }
                 this.mRect.set(0, i8, getDisplayWidth(this.mTrendView.getContext()), this.mXItemHeight + i8);
@@ -417,7 +418,7 @@ public class GPTrendChart extends GTrendChart {
             } else {
                 String[] split = trendData.getRed().split(",");
                 int i8 = this.mXItemHeight * i6;
-                if (i6 >= i - 4) {
+                if (i6 >= i ) {
                     i8 += this.mDivHeight;
                 }
                 for (i7 = 0; i7 < split.length; i7++) {

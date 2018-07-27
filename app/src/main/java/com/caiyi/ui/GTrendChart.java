@@ -170,9 +170,9 @@ public abstract class GTrendChart implements ITrendChart {
             drawXTop();
             drawLeftTop();
             drawY();
-            drawXBottom();
+//            drawXBottom();
             drawContent();
-            drawLeftBottom();
+//            drawLeftBottom();
             this.mInitOk = true;
         }
     }
