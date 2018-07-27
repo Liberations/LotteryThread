@@ -71,7 +71,7 @@ public class GaoPinActivity extends Activity {
         this.mTrendChart.setDrawLine(true);
     }
 
-  
+
     private Handler mHandler = new Handler() {
         public void handleMessage(Message paramMessage) {
             super.handleMessage(paramMessage);
