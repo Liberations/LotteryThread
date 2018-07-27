@@ -177,7 +177,7 @@ public class GPTrendChart extends GTrendChart {
                 }
                 String type = ((TrendData) this.mTrendData.get(i)).getType();
                 if (type.equals("row")) {
-                    type = ((TrendData) this.mTrendData.get(i)).getPid();
+                    type = ((TrendData) this.mTrendData.get(i)).getPid()+"期";
                     if (i % 2 == 0) {
                         this.mPaint.setColor(this.mCOddY);
                     } else {
