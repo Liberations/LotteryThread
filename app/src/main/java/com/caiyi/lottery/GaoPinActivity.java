@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.caiyi.data.TrendData;
 import com.caiyi.ui.GPTrendChart;
@@ -42,7 +43,15 @@ public class GaoPinActivity extends Activity implements GPTrendChart.ISelectedCh
     }
 
     private void loadData() {
-
+       /* ArrayList arrayList = new ArrayList();
+        for (int i = 0; i < 10; i++) {
+            TrendData trendData = new TrendData();
+            trendData.setType("row");
+            trendData.setPid("25");
+            trendData.setRed("2,5,3,1,3,1,7,12,7,0,2");
+            arrayList.add(trendData);
+        }
+        mHandler.sendMessage(mHandler.obtainMessage(120, arrayList));*/
         try {
             InputStream is = getResources().getAssets().open("20.xml");
             setParser(is);
@@ -108,6 +117,7 @@ public class GaoPinActivity extends Activity implements GPTrendChart.ISelectedCh
                     trendData.setNum(newPullParser.getAttributeValue(null, "num"));
                     trendData.setTimes(newPullParser.getAttributeValue(null, "times"));
                     trendData.setForm(newPullParser.getAttributeValue(null, "form"));
+                    Log.d("trendData", "setParser: "+trendData.toString());
                     arrayList.add(trendData);
                 }
             }
