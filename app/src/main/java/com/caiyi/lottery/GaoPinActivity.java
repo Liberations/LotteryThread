@@ -27,7 +27,7 @@ import java.util.TreeSet;
  * Created by Administrator on 2018/7/2.
  */
 
-public class GaoPinActivity extends Activity implements GPTrendChart.ISelectedChangeListener {
+public class GaoPinActivity extends Activity {
 
     private GPTrendChart mTrendChart;
 
@@ -69,13 +69,9 @@ public class GaoPinActivity extends Activity implements GPTrendChart.ISelectedCh
         this.mTrendView.setChart(this.mTrendChart);
         this.mTrendChart.setShowYilou(true);
         this.mTrendChart.setDrawLine(true);
-        this.mTrendChart.setSelectedChangeListener(this);
     }
 
-    @Override
-    public void onSelectedChange(TreeSet<Integer> treeSet) {
-
-    }
+  
     private Handler mHandler = new Handler() {
         public void handleMessage(Message paramMessage) {
             super.handleMessage(paramMessage);
