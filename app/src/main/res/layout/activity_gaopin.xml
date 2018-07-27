@@ -2,13 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
     android:orientation="vertical">
 
     <com.caiyi.ui.GpTrendView
         android:id="@+id/gp_trendView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1.0"
+        android:layout_height="250dp"
         android:background="@android:color/white" />
+    <TextView
+        android:text="測試下"
+        android:background="#35d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
