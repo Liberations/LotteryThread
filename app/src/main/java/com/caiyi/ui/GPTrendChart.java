@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint.Align;
 import android.graphics.Paint.Style;
 import android.graphics.Path;
+import android.graphics.Typeface;
 import android.support.v4.view.ViewCompat;
 import android.text.TextUtils;
 import android.view.MotionEvent;
@@ -160,6 +161,7 @@ public class GPTrendChart extends GTrendChart {
             this.mPaint.setStyle(Style.FILL);
             int size = this.mTrendData.size();
             for (int i = 0; i < size; i++) {
+                this.mPaint.setFakeBoldText(true);
                 int i2 = i * this.mYItemHeight;
                 if (i == size ) {
                     this.mRect.set(0, this.mYItemHeight * i, this.mYItemWidth, (this.mYItemHeight * i) + this.mDivHeight);
@@ -185,29 +187,10 @@ public class GPTrendChart extends GTrendChart {
                     }
                     beginRecording.drawRect(this.mRect, this.mPaint);
                     this.mPaint.setColor(this.mCYText);
-                } else if (type.equals("dis")) {
-                    type = "出现次数";
-                    this.mPaint.setColor(-1);
-                    beginRecording.drawRect(this.mRect, this.mPaint);
-                    this.mPaint.setColor(this.mCApCount);
-                } else if (type.equals("avg")) {
-                    type = "平均遗漏";
-                    this.mPaint.setColor(this.mCAvgYilouBg);
-                    beginRecording.drawRect(this.mRect, this.mPaint);
-                    this.mPaint.setColor(this.mCAvgYilou);
-                } else if (type.equals("mmv")) {
-                    type = "最大遗漏";
-                    this.mPaint.setColor(-1);
-                    beginRecording.drawRect(this.mRect, this.mPaint);
-                    this.mPaint.setColor(this.mCMaxYilou);
-                } else if (type.equals("mlv")) {
-                    type = "最大连出";
-                    this.mPaint.setColor(this.mCLianchuBg);
-                    beginRecording.drawRect(this.mRect, this.mPaint);
-                    this.mPaint.setColor(this.mCLianchu);
-                } else {
+                }else {
                     type = "??";
                 }
+
                 this.mPaint.setTextSize((float) this.mYTextSize);
                 drawText2Rect(type, beginRecording, this.mRect, this.mPaint);
             }
@@ -335,6 +318,7 @@ public class GPTrendChart extends GTrendChart {
         Canvas beginRecording = this.mPicContent.beginRecording((int) i2, (this.mYItemHeight * this.mTrendData.size()) + this.mDivHeight);
         this.mPaint.setTextSize((float) this.mCTextSize);
         this.mPaint.setStyle(Style.FILL);
+        this.mPaint.setFakeBoldText(false);
         int i3 = this.redCount;//球的个数
         int size = this.mTrendData.size();//数据的个数,包括平均遗漏等数据
         for (i = 0; i <= size; i++) {

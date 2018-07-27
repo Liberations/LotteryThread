@@ -109,50 +109,6 @@ public class GaoPinActivity extends Activity implements GPTrendChart.ISelectedCh
                     trendData.setTimes(newPullParser.getAttributeValue(null, "times"));
                     trendData.setForm(newPullParser.getAttributeValue(null, "form"));
                     arrayList.add(trendData);
-                } else if ("dis".equals(name)) {
-                    r0 = new TrendData();
-                    r0.setType("dis");
-                    r0.setRed(newPullParser.getAttributeValue(null, "red"));
-                    r0.setBlue(newPullParser.getAttributeValue(null, "blue"));
-                    r0.setBalls(newPullParser.getAttributeValue(null, "balls"));
-                    r0.setOne(newPullParser.getAttributeValue(null, "one"));
-                    r0.setTwo(newPullParser.getAttributeValue(null, "two"));
-                    r0.setThree(newPullParser.getAttributeValue(null, "three"));
-                    r0.setNum(newPullParser.getAttributeValue(null, "num"));
-                    arrayList2.add(r0);
-                } else if ("avg".equals(name)) {
-                    r0 = new TrendData();
-                    r0.setType("avg");
-                    r0.setRed(newPullParser.getAttributeValue(null, "red"));
-                    r0.setBlue(newPullParser.getAttributeValue(null, "blue"));
-                    r0.setBalls(newPullParser.getAttributeValue(null, "balls"));
-                    r0.setOne(newPullParser.getAttributeValue(null, "one"));
-                    r0.setTwo(newPullParser.getAttributeValue(null, "two"));
-                    r0.setThree(newPullParser.getAttributeValue(null, "three"));
-                    r0.setNum(newPullParser.getAttributeValue(null, "num"));
-                    arrayList2.add(r0);
-                } else if ("mmv".equals(name)) {
-                    r0 = new TrendData();
-                    r0.setType("mmv");
-                    r0.setRed(newPullParser.getAttributeValue(null, "red"));
-                    r0.setBlue(newPullParser.getAttributeValue(null, "blue"));
-                    r0.setBalls(newPullParser.getAttributeValue(null, "balls"));
-                    r0.setOne(newPullParser.getAttributeValue(null, "one"));
-                    r0.setTwo(newPullParser.getAttributeValue(null, "two"));
-                    r0.setThree(newPullParser.getAttributeValue(null, "three"));
-                    r0.setNum(newPullParser.getAttributeValue(null, "num"));
-                    arrayList2.add(r0);
-                } else if ("mlv".equals(name)) {
-                    r0 = new TrendData();
-                    r0.setType("mlv");
-                    r0.setRed(newPullParser.getAttributeValue(null, "red"));
-                    r0.setBlue(newPullParser.getAttributeValue(null, "blue"));
-                    r0.setBalls(newPullParser.getAttributeValue(null, "balls"));
-                    r0.setOne(newPullParser.getAttributeValue(null, "one"));
-                    r0.setTwo(newPullParser.getAttributeValue(null, "two"));
-                    r0.setThree(newPullParser.getAttributeValue(null, "three"));
-                    r0.setNum(newPullParser.getAttributeValue(null, "num"));
-                    arrayList2.add(r0);
                 }
             }
         }
