@@ -7,11 +7,6 @@
     <com.caiyi.ui.GpTrendView
         android:id="@+id/gp_trendView"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@android:color/white" />
-    <TextView
-        android:text="測試下"
-        android:background="#35d"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
+
 </LinearLayout>
