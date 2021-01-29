@@ -8,4 +8,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <declare-styleable name="myLottery">
+        <attr name="divColor" format="color"/>
+        <attr name="divWidth" format="dimension"/>
+        <attr name="ballBgHeight" format="dimension"/>
+        <attr name="ballLineWidth" format="dimension" />
+        <attr name="ballRadius" format="dimension" />
+        <attr name="headHeight" format="dimension" />
+        <attr name="ballTextSize" format="dimension" />
+        <attr name="ballTextColor" format="color" />
+        <attr name="headTextSize" format="dimension" />
+        <attr name="headTextColor" format="color" />
+        <attr name="head2TextSize" format="dimension" />
+        <attr name="head2TextColor" format="color" />
+    </declare-styleable>
 </resources>

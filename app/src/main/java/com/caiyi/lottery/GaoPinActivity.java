@@ -7,10 +7,16 @@ import android.os.Message;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 
+import com.caiyi.data.BlueBall;
+import com.caiyi.data.GreenBall;
+import com.caiyi.data.RedBall;
 import com.caiyi.data.TrendData;
+import com.caiyi.interfaces.ILotteryData;
 import com.caiyi.ui.GPTrendChart;
 import com.caiyi.ui.GpTrendView;
+import com.caiyi.ui.LotteryView;
 import com.lottery9188.Activity.R;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -21,6 +27,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+import java.util.Random;
 import java.util.TreeSet;
 
 /**
@@ -32,6 +40,7 @@ public class GaoPinActivity extends Activity {
     private GPTrendChart mTrendChart;
 
     private GpTrendView mTrendView;
+
 
 
     @Override
@@ -78,9 +87,9 @@ public class GaoPinActivity extends Activity {
             GaoPinActivity.this.mTrendChart.updateData("01", (ArrayList) paramMessage.obj);
         }
     };
+
     /**
      * @param
-     *
      */
     protected void setParser(InputStream inputStream) throws XmlPullParserException, IOException {
         ArrayList arrayList = new ArrayList();
@@ -113,7 +122,7 @@ public class GaoPinActivity extends Activity {
                     trendData.setNum(newPullParser.getAttributeValue(null, "num"));
                     trendData.setTimes(newPullParser.getAttributeValue(null, "times"));
                     trendData.setForm(newPullParser.getAttributeValue(null, "form"));
-                    Log.d("trendData", "setParser: "+trendData.toString());
+                    Log.d("trendData", "setParser: " + trendData.toString());
                     arrayList.add(trendData);
                 }
             }
@@ -121,5 +130,6 @@ public class GaoPinActivity extends Activity {
         arrayList.addAll(arrayList2);
         mHandler.sendMessage(mHandler.obtainMessage(120, arrayList));
     }
+
 
 }
