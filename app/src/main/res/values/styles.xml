@@ -21,5 +21,6 @@
         <attr name="headTextColor" format="color" />
         <attr name="head2TextSize" format="dimension" />
         <attr name="head2TextColor" format="color" />
+        <attr name="isHorizontal" format="boolean" />
     </declare-styleable>
 </resources>

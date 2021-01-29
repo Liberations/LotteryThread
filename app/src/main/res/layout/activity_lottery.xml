@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:onClick="testData"
         android:text="随机数字" />
-    <ScrollView
+
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <com.caiyi.ui.LotteryView
             android:id="@+id/lv"
@@ -24,6 +27,8 @@
             app:ballTextSize="16sp"
             app:divColor="#efefef"
             app:divWidth="0.5dp"
-            app:headHeight="75dp" />
-    </ScrollView>
+            app:headHeight="75dp"
+            app:isHorizontal="true" />
+    </HorizontalScrollView>
+
 </LinearLayout>
