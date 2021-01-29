@@ -9,13 +9,7 @@ import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
-import android.widget.Scroller;
-import android.widget.TextView;
 
 import com.caiyi.interfaces.ILotteryData;
 import com.lottery9188.Activity.R;
